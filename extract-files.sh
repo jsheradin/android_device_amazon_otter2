@@ -1,8 +1,7 @@
 #!/bin/sh
 
-# Call up to otter2-pvr
-./extract-files-pvr.sh
+set -e
 
-# Call up to omap4-common
-cd ../omap4-common
-./extract-files.sh
+export DEVICE=otter2
+export VENDOR=amazon
+./../../$VENDOR/omap4-common/extract-files.sh $@
